@@ -3,6 +3,36 @@
 }
 
 
-.h1{
+.commerce-color{
     color:#006649;
+}
+
+.login-color{
+    background-color:#E9CA3D
+}
+
+
+.body-alignment{
+    left:10%;
+}
+
+/*Table sizing*/
+.table-size{
+    width:75%;
+    height: 10%;
+}
+
+.table-top-col{
+    background-color: #619240;
+    color:white;
+}
+
+.table-row-color{
+    background-color:#DCEEC5;
+}
+
+.table-cell{
+    height: 5%;
+    width: 16%;
+    font-size: 20px;
 }
