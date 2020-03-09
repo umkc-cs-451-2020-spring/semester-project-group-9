@@ -1,9 +1,52 @@
-.nav-bar{
-    height: 10%;
+/*     Fonts     */
+@font-face{
+    font-family: Cera-Pro;
+    src: url('HTML/Fonts/CeraProLight.otf') format("opentype");
+}
+
+@font-face{
+    font-family: Cera-Pro-Bold;
+    font-weight:bold;
+    src: url('HTML/Fonts/CeraProMedium.otf') format("opentype");
+}
+
+/*     Navigation Bar CSS     */
+ul{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+    overflow:hidden;
 }
 
 
-.commerce-color{
+li a{
+    font-size: 18   px;
+    display:block;
+    text-align:center;
+    text-decoration:none;
+}
+
+/* Check for redundant code in this later */
+
+.nav-bar{
+    height: 10%;
+    align-items: baseline;
+}
+
+.nav-bar{
+    color:black;
+}
+
+.nav-bar-selected{
+    font-family: Cera-Pro, sans-serif;
+    color:#006649;
+}
+
+.nav-bar-unselected{
+    font-family: Cera-Pro-Bold, sans-serif;
+}
+
+.font-color{
     color:#006649;
 }
 
@@ -16,7 +59,10 @@
     left:10%;
 }
 
-/*Table sizing*/
+
+
+
+/*     Table sizing     */
 .table-size{
     width:75%;
     height: 10%;
