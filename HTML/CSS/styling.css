@@ -1,13 +1,13 @@
 /*     Fonts     */
 @font-face{
     font-family: Cera-Pro;
-    src: url('HTML/Fonts/CeraProLight.otf') format("opentype");
+    src: url("CeraPro-Light.ttf") format("truetype");
 }
 
 @font-face{
     font-family: Cera-Pro-Bold;
     font-weight:bold;
-    src: url('HTML/Fonts/CeraProMedium.otf') format("opentype");
+    src: url('CeraPro-Medium.ttf') format("truetype");
 }
 
 /*     Navigation Bar CSS     */
@@ -26,15 +26,31 @@ li a{
     text-decoration:none;
 }
 
-/* Check for redundant code in this later */
+.dropdown{
+    position: relative;
+    display:inline-block;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+}
+
+.dropdown:hover .dropdown-content{
+    display: block;
+}
+
+/* Check for redundant code in this, delete later */
 
 .nav-bar{
     height: 10%;
     align-items: baseline;
-}
-
-.nav-bar{
-    color:black;
+    background: #FAF9F7;
 }
 
 .nav-bar-selected{
@@ -43,6 +59,7 @@ li a{
 }
 
 .nav-bar-unselected{
+    color:#9C9C9A;
     font-family: Cera-Pro-Bold, sans-serif;
 }
 
@@ -55,16 +72,33 @@ li a{
 }
 
 
-.body-alignment{
-    left:10%;
+.body-size{
+    width: 80%;
+    left: 10%;
+    position:relative;
+}
+
+.welcome-message{
+    float:left;
+    border: 3px solid;
+    font-size: 28px;
+    position:relative;
 }
 
 
+/*     Horizontal Line     */
+
+/* Needs editing later */
+
+hr{
+    height: 3px;
+    color: #ADD777;
+}
 
 
 /*     Table sizing     */
 .table-size{
-    width:75%;
+    width:100%;
     height: 10%;
 }
 
