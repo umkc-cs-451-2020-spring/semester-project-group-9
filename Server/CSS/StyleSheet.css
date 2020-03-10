@@ -1,0 +1,23 @@
+﻿/*     Fonts     */
+@font-face {
+    font-family: Cera-Pro;
+    src: url("CeraPro-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Cera-Pro-Bold;
+    font-weight: bold;
+    src: url('CeraPro-Medium.ttf') format("truetype");
+}
+
+
+/*     Gridview     */
+.Grid {
+    background-color: #006649;
+    margin: 5px 0 10px 0;
+    border: solid 1px #525252;
+    border-collapse: collapse;
+    font-family: Cera-Pro-Bold;
+    color: #474747;
+}
+
