@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<!--     Scripts     -->
+<head>
+  <title>Homepage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="HTML/CSS/styling.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+    <!--     Navigation Bar     -->
+    <div class = "nav-bar row">
+
+
+        <!--     Commerce Bank Logo     -->
+        <div id="logo" class="col">
+            <href src="homepage.html" title="Commerce Bank"><img src="HTML/Images/headers/Image_1.png"></href>
+        </div>  
+        
+        
+        <!--     Navigation Bar Cells     -->
+        <ul id="navigation-bar" style="float:right" class="col row">
+
+            <!--     Transaction Cell    -->
+            <li id="transaction-cell" class="col nav-bar-selected">
+                
+                    <a href="transaction.html">
+                    <span class="nav-bar-selected">
+                        <img src="HTML/Images/icons/Group_96@2x.png">
+                        Transaction
+                    </span>
+                </a>
+            </li>
+
+            <!--     Dashboard Cell     -->
+            <li id="dashboard-cell" class="col">
+                <a href="dashboard.html">
+                    <span class="nav-bar-unselected">
+                        <img src="HTML/Images/icons/Dashboard@2x.png">
+                        Dashboard
+                    </span>
+                </a>
+            </li>
+
+            <!--     Setting     -->
+            <li id="setting-cell" class="col">
+                <a href="setting.html">
+                    <span class="nav-bar-unselected">
+                        <img src="HTML/Images/icons/Settings@2x.png">
+                        Settings
+                    </span>
+                </a>
+            </li>
+
+            <!--     User     -->
+                    <li id="user-cell" class="col">
+                        <div class="dropdown">
+                        <a>
+                            <span class="nav-bar-unselected">
+                                <img src="HTML/Images/icons/User@2x.png">
+                                User
+                            </span>
+                            
+                        </a>
+                        <div class="dropdown-content">
+                            Logout
+                        </div>
+                        </div>
+                    </li>
+
+            </ul>
+        </div>
+    </div>
+
+
+
+
+    <!--     Body     -->
+    <body>
+
+    <!--     Welcome Message     -->
+    <div id="information" class="body-size">
+        <div id="welcome-message"   class="welcome-message row">
+            <div id="welcome" class="commerce-color">
+                Welcome,
+            </div>
+            <div id="transaction-message" class="commerce-color">
+                Here is your transaction summary.
+            </div>
+        </div>
+        
+
+        <!--      Horizontal Line     -->
+        <div id="horizontal-line" class="row">
+          <hr/>
+        </div>
+
+        <!--      Table Interactions     -->
+        <div id="table-interaction" class="row">
+            <!--     Search Bar     -->
+            
+            <div id="text-field" class = "col w-50">
+                <input type="text" id="search-sort" name="search-sort" placeholder="Enter keyword, amount, or mm/dd/yy">
+            </div>
+
+
+            <!--     Export File     -->
+            <div class="col">
+                <a>
+                    <span>
+                        <img src="HTML/Images/icons/Export@2x.png">
+                        Export
+                    </span>
+                </a>
+            </div>
+        
+
+            <!--     Add Transaction     -->
+
+            <!-- Change this to a button or something later -->
+            <div id="transaction-add" class="col">
+                <a>
+                    <span>
+                        <img>
+                        Add Transaction
+                    </span>
+                </a>
+            </div>
+        </div>
+
+
+        <!--
+            To Do: 
+                Pull from server
+                Add information about table via javascript
+        -->
+        
+        <!--     Table     -->
+        <div id="table">
+
+            <!--     Row 1     -->
+            <div id="row-1" class=" row table-size table-top-col">
+                <div id="date" title="Date" class="col table-cell">
+                    Date
+                </div>
+                <div id="amount" title="Amount" class="col table-cell">
+                    Amount
+                </div>
+                <div id="description" title="Description" class="col table-cell">
+                    Description
+                </div>
+                <div id="categories" title="Categories" class="col table-cell">
+                    Categories
+                </div>
+                <div id="state" title="State" class="col table-cell">
+                    State
+                </div>
+                <div id="balance" title="Balance" class="col table-cell">
+                    Balance
+                </div>
+            </div>
+
+
+            <!--     Row 2     -->
+            <!--     This is a sample, delete this later     -->
+            <div id="row-2" class="row table-size">
+                <div id="date" class="col table-cell">
+                    1/30/20
+                </div>
+                <div id="amount" class="col table-cell">
+                    $8.00
+                </div>
+                <div id="description" class="col table-cell">
+                    Starbucks
+                </div>
+                <div id="categories" class="col table-cell">
+                    Dining
+                </div>
+                <div id="state" class="col table-cell">
+                    MO
+                </div>
+                <div id="balance" class="col table-cell">
+                    $4,571.08
+                </div>
+            </div>
+
+            <!--     Row 3      -->
+            <!--     This is a sample, delete this later     -->
+            <div id="row-3" class="row table-size table-row-color">
+                <div id="date" class="col table-cell">
+                    1/30/20
+                </div>
+                <div id="amount" class="col table-cell">
+                    $8.00
+                </div>
+                <div id="description" class="col table-cell">
+                    Starbucks
+                </div>
+                <div id="categories" class="col table-cell">
+                    Dining
+                </div>
+                <div id="state" class="col table-cell">
+                    MO
+                </div>
+                <div id="balance" class="col table-cell">
+                    $4,571.08
+                </div>
+            </div>
+
+
+            <!--     Row 4     -->
+            <!--     Sample Delete later     -->
+            <div id="row-4" class="row table-size">
+                <div id="date" class="col table-cell">
+                    1/30/20
+                </div>
+                <div id="amount" class="col table-cell">
+                    $8.00
+                </div>
+                <div id="description" class="col table-cell">
+                    Starbucks
+                </div>
+                <div id="categories" class="col table-cell">
+                    Dining
+                </div>
+                <div id="state" class="col table-cell">
+                    MO
+                </div>
+                <div id="balance" class="col table-cell">
+                    $4,571.08
+                </div>
+            </div>
+
+
+            <!--     Row 5     -->
+            <!--     Sample Delete Later     -->
+            <div id="row-5" class="row table-size table-row-color">
+                <div id="date" class="col table-cell">
+                    1/30/20
+                </div>
+                <div id="amount" class="col table-cell">
+                    $8.00
+                </div>
+                <div id="description" class="col table-cell">
+                    Starbucks
+                </div>
+                <div id="categories" class="col table-cell">
+                    Dining
+                </div>
+                <div id="state" class="col table-cell">
+                    MO
+                </div>
+                <div id="balance" class="col table-cell">
+                    $4,571.08
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
