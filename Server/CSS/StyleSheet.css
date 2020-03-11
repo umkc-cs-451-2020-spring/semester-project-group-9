@@ -12,12 +12,29 @@
 
 
 /*     Gridview     */
+
+table {
+    font-family:Cera-Pro;
+}
+
 .Grid {
-    background-color: #006649;
+
+    /*      Alternating Row Color     */
+    background-color: #DCEEC5;
+    
+    
     margin: 5px 0 10px 0;
     border: solid 1px #525252;
     border-collapse: collapse;
-    font-family: Cera-Pro-Bold;
-    color: #474747;
+    font-family: Cera-Pro;
+
 }
 
+
+table tbody tr th {
+    padding: 4px 2px;
+    color: #ffffff;
+    background: #006649;
+    border-left: solid 1px #525252;
+    font-size: 0.9em;
+}
