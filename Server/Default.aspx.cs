@@ -37,7 +37,11 @@ namespace CommerceBank
             //Creates a command for the SQL query
             SqlCommand cmd = con.CreateCommand();
             cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select * from CustomerData";
+            cmd.CommandText = "select processing_date as ProcessingDate," +
+                " balance as Balance," +
+                " Action," +
+                " Description " +
+                "from CustomerData";
 
             //Executes the SQL query
             cmd.ExecuteNonQuery();
