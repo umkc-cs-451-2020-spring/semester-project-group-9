@@ -1,0 +1,61 @@
+CREATE TABLE [dbo].[CustomerData] (
+    [Acct]            INT            DEFAULT ((211111110)) NOT NULL,
+    [Processing_Date] SMALLDATETIME  NULL,
+    [Balance]         NUMERIC (6, 2) DEFAULT ((4200)) NOT NULL,
+    [CRorDR]          CHAR (2)       NOT NULL,
+    [Amount]          NUMERIC (5, 2) NULL,
+    [Description]     NVARCHAR (35)  NULL,
+    [State]           CHAR (2)       NOT NULL,
+    [Categories]      NVARCHAR (15)  NOT NULL,
+    [TranscationID]   INT            IDENTITY (1, 1) NOT NULL,
+    CONSTRAINT [PK_CustomerData] PRIMARY KEY CLUSTERED ([TranscationID] ASC)
+);
+
+CREATE TABLE [dbo].[Categories] (
+    [Categories] VARCHAR (50) NOT NULL,
+    PRIMARY KEY CLUSTERED ([Categories] ASC)
+);
+
+CREATE TABLE [dbo].[Triggers] (
+    [TriggerID]    INT           IDENTITY (1, 1) NOT NULL,
+    [TriggerTime1] TIME (7)      NULL,
+    [TriggerCate]  NVARCHAR (15) NULL,
+    [TriggerState] CHAR (2)      NULL,
+    [TriggerTime2] TIME (7)      NULL,
+    PRIMARY KEY CLUSTERED ([TriggerID] ASC)
+);
+
+CREATE TABLE [dbo].[Alert] (
+    [AlertID]       INT IDENTITY (1, 1) NOT NULL,
+    [TranscationID] INT NOT NULL,
+    [TriggerID]     INT NOT NULL,
+    PRIMARY KEY CLUSTERED ([AlertID] ASC),
+    CONSTRAINT [FK_TranscationID] FOREIGN KEY ([TranscationID]) REFERENCES [dbo].[CustomerData] ([TranscationID]) ON DELETE CASCADE ON UPDATE CASCADE,
+    CONSTRAINT [FK_TriggerID] FOREIGN KEY ([TriggerID]) REFERENCES [dbo].[Triggers] ([TriggerID]) ON DELETE CASCADE ON UPDATE CASCADE
+);
+
+--Triger
+GO
+CREATE TRIGGER [StateTrigger]
+	ON [dbo].[Triggers]
+	AFTER INSERT
+	AS
+	BEGIN
+		SET NOCOUNT ON
+		DECLARE @TriggerID int;
+		select @TriggerID=t.TriggerID  from inserted t;
+
+		DECLARE @TranscationID int;
+		SELECT @TranscationID=cs.TranscationID FROM dbo.CustomerData as cs
+		--JOIN dbo.Alert as al  on cs.TranscationID=al.TranscationID
+		--JOIN dbo.Triggers as tg on tg.TriggerID=al.TriggerID
+		--WHERE cs.State=tg.TriggerState;
+
+		Insert into dbo.Alert (TriggerID,TranscationID) 
+		Values(@TriggerID,@TranscationID);
+		SELECT @TranscationID from dbo.CustomerData as cs
+		JOIN dbo.Alert as al  on cs.TranscationID=al.TranscationID
+		JOIN dbo.Triggers as tg on tg.TriggerID=al.TriggerID
+		WHERE cs.State=tg.TriggerState;
+
+		END
