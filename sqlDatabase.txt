@@ -1,3 +1,4 @@
+//Tables
 CREATE TABLE [dbo].[CustomerData] (
     [Acct]            INT            DEFAULT ((211111110)) NOT NULL,
     [Processing_Date] SMALLDATETIME  NULL,
