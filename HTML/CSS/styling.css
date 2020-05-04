@@ -189,3 +189,25 @@ hr{
 #transaction-add{
 	padding-right: 0;
 }
+
+#input_container{
+	position:relative;
+    padding:0 0 0 0px;
+    margin:0 0px;
+    direction: rtl;
+    width: 200px;
+}
+#input{
+	height:30px;
+    margin:0;
+    padding-right: 30px;
+    width: 100%;
+}
+
+#input_img {
+    position:absolute;
+    bottom:2px;
+    left: 5px;
+    width:24px;
+    height:24px;
+}
