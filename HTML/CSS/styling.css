@@ -10,6 +10,8 @@
     src: url('CeraPro-Medium.ttf') format("truetype");
 }
 
+
+
 /*     Navigation Bar CSS     */
 ul{
     list-style-type: none;
@@ -115,4 +117,33 @@ hr{
     height: 5%;
     width: 16%;
     font-size: 20px;
+}
+
+.login-button{
+	background-color: #006649;
+	color: white;
+	width: 310px;
+	height: 50px;
+	font-family:Cera-Pro-Bold;
+}
+
+.footer {
+   position: absolute;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+}
+
+#login-field{
+	position:inherit;
+	padding-bottom:5.8%;
+	width: 494px;
+	min-height: 450px;
+	background-image: url("../../../../Unnamed Site 2/login_background@2x.png");
+	border: none;
+}
+
+#account-number{
+
 }
