@@ -55,6 +55,8 @@ li a{
     background: #FAF9F7;
 }
 
+
+
 .nav-bar-selected{
     font-family: Cera-Pro, sans-serif;
     color:#006649;
@@ -81,22 +83,44 @@ li a{
 }
 
 .welcome-message{
+	padding-top: 80px;
+	padding-bottom: 0px;
     float:left;
-    border: 3px solid;
+    border: none;
     font-size: 28px;
+	font-family: Cera-Pro-Bold;
+	color: #006649;
     position:relative;
+	
 }
+
 
 
 /*     Horizontal Line     */
+hr{
+  border: 0;
+  clear:both;
+  display:block;
+  width: 300%;               
+  background-color:#ADD777;
+  height: 0px;
+  padding-top: 3px;
+
+}
+
+
 
 /* Needs editing later */
 
-hr{
-    height: 3px;
-    color: #ADD777;
-}
 
+.float-lg-right{
+	background-color: #619240;
+	color: white;
+	border-radius: 8px;
+	border: none;
+	width: 60%
+	
+}
 
 /*     Table sizing     */
 .table-size{
@@ -146,4 +170,22 @@ hr{
 
 #account-number{
 
+}
+
+#horizontal-line{
+	
+    width: 100%;
+    height: 10px;
+	padding-top: 0px;
+	padding-bottom: 50px;
+
+}
+
+#table-interaction{
+	padding-bottom: 20px;
+	width: 100%;
+}
+
+#transaction-add{
+	padding-right: 0;
 }

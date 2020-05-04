@@ -18,7 +18,7 @@
 
 
     <!--     Navigation Bar     -->
-    <div class = "nav-bar row">
+    <div class = "nav-bar row" style="padding-top: 0px;">
 
 
         <!--     Commerce Bank Logo     -->
@@ -34,8 +34,8 @@
             <li id="transaction-cell" class="col nav-bar-selected">
                 
                     <a href="transaction.html">
-                    <span class="nav-bar-selected">
-                        <img src="HTML/Images/icons/Group_96@2x.png">
+                    <span class="nav-bar-selected" style="font-family:Cera-Pro-Bold;font-size: 17px">
+                        <img src="HTML/Images/icons/Group_96@2x.png" >
                         Transaction
                     </span>
                 </a>
@@ -44,8 +44,8 @@
             <!--     Dashboard Cell     -->
             <li id="dashboard-cell" class="col">
                 <a href="dashboard.html">
-                    <span class="nav-bar-unselected">
-                        <img src="HTML/Images/icons/Dashboard@2x.png">
+                    <span class="nav-bar-unselected" style="font-family:Cera-Pro;font-size: 19px">
+                        <img src="HTML/Images/icons/Dashbaord@2x.png" width="27px">
                         Dashboard
                     </span>
                 </a>
@@ -54,19 +54,19 @@
             <!--     Setting     -->
             <li id="setting-cell" class="col">
                 <a href="setting.html">
-                    <span class="nav-bar-unselected">
-                        <img src="HTML/Images/icons/Settings@2x.png">
+                    <span class="nav-bar-unselected" style="font-family:Cera-Pro;font-size: 19px">
+                        <img src="HTML/Images/icons/Settings@2x.png" width="27px" height="27px">
                         Settings
                     </span>
                 </a>
             </li>
 
             <!--     User     -->
-                    <li id="user-cell" class="col">
+                    <li id="user-cell" class="col" style="font-family:Cera-Pro;font-size: 19px">
                         <div class="dropdown">
                         <a>
-                            <span class="nav-bar-unselected">
-                                <img src="HTML/Images/icons/User@2x.png">
+                            <span class="nav-bar-unselected" style="font-family: Cera-Pro">
+                                <img src="HTML/Images/icons/User@2x.png" width="27px" height="27px">
                                 User
                             </span>
                             
@@ -79,7 +79,7 @@
 
             </ul>
         </div>
-    </div>
+   
 
 
 
@@ -89,19 +89,19 @@
 
     <!--     Welcome Message     -->
     <div id="information" class="body-size">
-        <div id="welcome-message"   class="welcome-message row">
-            <div id="welcome" class="commerce-color">
-                Welcome,
-            </div>
-            <div id="transaction-message" class="commerce-color">
-                Here is your transaction summary.
-            </div>
+      <div id="welcome-message"   class="welcome-message row">
+            <div id="welcome" class="commerce-color" >
+              <p>Welcome, </p>
+                <p>Here is your transaction summary.</p>
+            </div> 
+            <br>
+            
         </div>
         
 
         <!--      Horizontal Line     -->
-        <div id="horizontal-line" class="row">
-          <hr/>
+        <div id="horizontal-line" class="row" >
+          <hr>
         </div>
 
         <!--      Table Interactions     -->
@@ -109,15 +109,16 @@
             <!--     Search Bar     -->
             
             <div id="text-field" class = "col w-50">
-                <input type="text" id="search-sort" name="search-sort" placeholder="Enter keyword, amount, or mm/dd/yy">
+				<img src="HTML/Images/icons/Search@2x.png" alt="search" width="25" height="25">
+                <input style="font-family:Cera-Pro;font-size: 14px" type="text" id="search-sort" name="search-sort" placeholder="Enter keyword, amount, or mm/dd/yy" size="35">
             </div>
 
 
             <!--     Export File     -->
-            <div class="col">
+            <div class="col" style="color: #ADD777; font-family:Cera-Pro;font-size: 20px">
                 <a>
                     <span>
-                        <img src="HTML/Images/icons/Export@2x.png">
+                        <img src="HTML/Images/icons/Export@2x.png" width="25" height="24" >
                         Export
                     </span>
                 </a>
@@ -127,15 +128,14 @@
             <!--     Add Transaction     -->
 
             <!-- Change this to a button or something later -->
-            <div id="transaction-add" class="col">
+            <div id="transaction-add" class="col" style="font-family:Cera-Pro-Bold; font-size=18px">
                 <a>
-                    <span>
-                        <img>
-                        Add Transaction
-                    </span>
+                    <button type="button" class="float-lg-right">
+                    + Add Transaction
+                </button>
                 </a>
             </div>
-        </div>
+      	  </div>
 
 
         <!--
@@ -154,7 +154,7 @@
                 </div>
                 <div id="amount" title="Amount" class="col table-cell">
                     Amount
-                </div>
+              </div>
                 <div id="description" title="Description" class="col table-cell">
                     Description
                 </div>
@@ -167,7 +167,7 @@
                 <div id="balance" title="Balance" class="col table-cell">
                     Balance
                 </div>
-            </div>
+          </div>
 
 
             <!--     Row 2     -->
@@ -264,7 +264,7 @@
                 </div>
             </div>
 
-        </div>
+      </div>
     </div>
 
 </body>
