@@ -53,26 +53,31 @@
     font-family:Cera-Pro-Bold;
 }
 
-.login-field {
+.login-box {
     position: relative;
     padding-top: 5%;
     padding-bottom: 5%;
     width: 100%;
     min-height: 450px;
     border: none;
+    padding: 10px;
 }
 
-#login-field {
-    position: inherit;
-    padding-top:5%;
-    padding-bottom: 5%;
-    width: 100%;
-    min-height: 450px;
-    border: none;
+.login-field {
+    text-align: center;
+    position: relative;
+    left:30%;
+    width: 33%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-width: 5px;
+    border-color: #009226;
+    border-style:solid;
+    border-radius:5px;
 }
 
 .text-fields{
-    font-size:28px;
+    font-size:18px;
 }
 
 

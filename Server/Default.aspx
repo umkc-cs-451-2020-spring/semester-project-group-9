@@ -39,7 +39,7 @@
 
 
     <!-- Login -->
-    <div id="login-field" style="text-align:center" class="center">
+    <div style="text-align:center" class="center login-box">
         <div class="login-field">
             <div>
                 <h1 class="commerce-color welcome">
