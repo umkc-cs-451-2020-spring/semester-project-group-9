@@ -10,18 +10,85 @@
     src: url('CeraPro-Medium.ttf') format("truetype");
 }
 
+.center{
+    position:fixed;
+    align-content:center;
+    text-align:center;
+    height:200px; 
+}
+
+
+/*      Commerce Colors
+
+    Yellow
+    #FFCE00
+
+    Green
+    #009226
+
+*/
+
+
+/*     Login Page     */
+
+.login-button {
+    background-color: #006649;
+    color: white;
+    width: 310px;
+    height: 50px;
+    font-family: Cera-Pro-Bold;
+}
+
+.welcome{
+    font-size:48px;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    background-color: #FFCE00;
+    padding: 20px;
+    color:white;
+    font-size: 20px;
+    font-family:Cera-Pro-Bold;
+}
+
+.login-field {
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 100%;
+    min-height: 450px;
+    border: none;
+}
+
+#login-field {
+    position: inherit;
+    padding-top:5%;
+    padding-bottom: 5%;
+    width: 100%;
+    min-height: 450px;
+    border: none;
+}
+
+.text-fields{
+    font-size:28px;
+}
+
+
 
 /*     Gridview     */
 
 table {
-    font-family:Cera-Pro;
+    font-family: Cera-Pro;
+    text-align: left;
 }
 
 .Grid {
 
     /*      Alternating Row Color     */
     background-color: #DCEEC5;
-    
+    text-align:left;
     
     margin: 5px 0 10px 0;
     border: solid 1px #525252;

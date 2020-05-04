@@ -6,6 +6,11 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
+using System.Configuration;
+using ClosedXML.Excel;
+using System.IO;
+
+// https://github.com/ClosedXML/ClosedXML
 
 namespace CommerceBank
 {
@@ -28,35 +33,101 @@ namespace CommerceBank
             con.Open();
 
             //Display the Data Table
-            disp_data();
+            //disp_data();
         }
 
         //Displays the current table
-        public void disp_data()
-        {
-            //Creates a command for the SQL query
-            SqlCommand cmd = con.CreateCommand();
-            cmd.CommandType = CommandType.Text;
-            cmd.CommandText = "select processing_date as ProcessingDate," +
-                " balance as Balance," +
-                " Action," +
-                " Description " +
-                "from CustomerData";
+        //public void disp_data()
+        //{
+        //    //Creates a command for the SQL query
+        //    SqlCommand cmd = con.CreateCommand();
+        //    cmd.CommandType = CommandType.Text;
 
-            //Executes the SQL query
-            cmd.ExecuteNonQuery();
+            //cmd.CommandText = "select processing_date as 'Processing Date'," +
+            //" balance as Balance," +
+            //" Action," +
+            //" Description " +
+            //"from CustomerData";
 
-            //Data Table Read from sql server
-            DataTable dt = new DataTable();
 
-            SqlDataAdapter da = new SqlDataAdapter(cmd);
+            //cmd.CommandText = "SELECT processing_date AS 'Processing Date'," +
+            //    "case dbo.CustomerData.action" +
+            //    " when ' CR' then CONCAT('$',Amount)" +
+            //    " when ' DR' then CONCAT('-$',Amount)" +
+            //    " end as Amount,Description,State,CONCAT('$',Balance)" +
+            //    " FROM CustomerData " +
+            //    "ORDER BY processing_date desc;";
 
-            //Fills the SQL Data by the Data Table
-            da.Fill(dt);
+            ////Executes the SQL query
+            //cmd.ExecuteNonQuery();
 
-            //Gets the Data from the data table and places it into the HTML
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
-        }
+            ////Data Table Read from sql server
+            //DataTable dt = new DataTable();
+
+            //SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+            ////Fills the SQL Data by the Data Table
+            //da.Fill(dt);
+
+            ////Gets the Data from the data table and places it into the HTML
+            //TransactionTable.DataSource = dt;
+            //TransactionTable.DataBind();
+        //}
+
+        //protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        //{
+
+        //}
+
+
+        //// Exports data from table to xlsx format
+        //// Reference:
+        //// https://www.aspsnippets.com/Articles/Write-data-to-Excel-file-xls-and-xlsx-in-ASPNet.aspx
+        //protected void export_to_xls(object sender, EventArgs e)
+        //{
+        //    //Creates a command for the SQL query
+        //    SqlCommand cmd = con.CreateCommand();
+        //    cmd.CommandType = CommandType.Text;
+        //    cmd.CommandText = "select processing_date as 'Processing Date'," +
+        //        " balance as Balance," +
+        //        " Action," +
+        //        " Description " +
+        //        "from CustomerData";
+
+        //    //Executes the SQL query
+        //    cmd.ExecuteNonQuery();
+
+        //    //Data Table Read from sql server
+        //    DataTable dt = new DataTable();
+
+        //    SqlDataAdapter da = new SqlDataAdapter(cmd);
+
+        //    da.Fill(dt);
+
+        //    // Create the workbook
+        //    XLWorkbook workbook = new XLWorkbook();
+
+        //    // Adds a tab to the Excel file
+        //    workbook.Worksheets.Add(dt, "Transactions");
+
+        //    // Prepare the response
+        //    HttpResponse httpResponse = Response;
+        //    httpResponse.Clear();
+        //    httpResponse.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
+        //    httpResponse.AddHeader("content-disposition", "attachment;filename=\"TransactionData.xlsx\"");
+
+        //    // Flush the workbook to the Response.OutputStream
+        //    using (MemoryStream memoryStream = new MemoryStream())
+        //    {
+        //        workbook.SaveAs(memoryStream);
+        //        memoryStream.WriteTo(httpResponse.OutputStream);
+        //        memoryStream.Close();
+        //    }
+
+        //    httpResponse.End();
+        //}
+
+
+
     }
 }
