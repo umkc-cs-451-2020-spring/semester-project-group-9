@@ -10,11 +10,32 @@
     src: url('CeraPro-Medium.ttf') format("truetype");
 }
 
-.center{
-    position:fixed;
-    align-content:center;
-    text-align:center;
-    height:200px; 
+.center {
+    position: relative;
+    align-content: center;
+    text-align: left;
+    width: 100%;
+}
+
+.body-size {
+    width: 80%;
+    left: 10%;
+    position: relative;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/*     Horizontal Line     */
+hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 100%;
+    background-color: #ADD777;
+    height: 0px;
+    padding-top: 3px;
 }
 
 
@@ -25,6 +46,9 @@
 
     Green
     #009226
+
+    Light Green
+    #ADD777
 
 */
 
@@ -80,6 +104,17 @@
     font-size:18px;
 }
 
+.welcome-message {
+    padding-top: 80px;
+    padding-bottom: 0px;
+    float: left;
+    border: none;
+    font-size: 28px;
+    font-family: Cera-Pro-Bold;
+    color: #006649;
+    position: relative;
+}
+
 
 
 /*     Gridview     */
@@ -94,7 +129,6 @@ table {
     /*      Alternating Row Color     */
     background-color: #DCEEC5;
     text-align:left;
-    
     margin: 5px 0 10px 0;
     border: solid 1px #525252;
     border-collapse: collapse;
@@ -106,7 +140,26 @@ table {
 table tbody tr th {
     padding: 4px 2px;
     color: #ffffff;
-    background: #006649;
-    border-left: solid 1px #525252;
+    background: #619240;
+    /*border-left: solid 1px #525252;*/
     font-size: 0.9em;
+}
+
+#table-interaction {
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+#transaction-add {
+    padding-right: 0;
+}
+
+
+.exportButton {
+    border: 1 solid white;
+    border-radius:5px;
+    padding: 5px 40px;
+    background: url("Images/Icons/Export@2x.png")
+    left 3px top 5px no-repeat white;
+    border: none !important;
 }

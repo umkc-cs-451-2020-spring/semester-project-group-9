@@ -10,10 +10,10 @@
     <title>Login - Commerce Bank</title>
         
     <link rel="stylesheet" type="text/css" href="CSS/StyleSheet.css"/>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" href="HTML/CSS/styling.css"/>
-    <link rel="stylesheet" href="CSS/bootstrap.css">
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="CSS/styling.css"/>
+    <link rel="stylesheet" href="CSS/bootstrap.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -50,15 +50,19 @@
 
             <div id="account_number" class="pb-sm-4 text-fields">
 
-                <asp:TextBox type="text" id="account_number_textfield" name="account_number_textfield" placeholder="Account Number" runat="server" >Account Number</asp:TextBox>
+                <asp:TextBox type="text" id="account_number" name="account_number_textfield" placeholder="Account Number" runat="server" ></asp:TextBox>
                     </div>
 
             <div id="password" class="pb-sm-4 text-fields">
-                <asp:TextBox type="password" id="password_Textfield" name="password_textfield" placeholder="Password" runat="server"></asp:TextBox>
+                <asp:TextBox type="password" id="password" name="password_textfield" placeholder="Password" runat="server"></asp:TextBox>
+            </div>
+
+            <div>
+                <asp:Label ID="errorMessage" runat="server" Text="Incorrect User Credentials"></asp:Label>
             </div>
 
             <div id="login-button" class="text-fields">
-                <asp:button ID="login_button" text="Login" runat="server">
+                <asp:button ID="login_button" text="Login" OnClick="Login" runat="server">
                 </asp:button>
             </div>
 

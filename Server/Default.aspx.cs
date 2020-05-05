@@ -32,8 +32,33 @@ namespace CommerceBank
             //Open new connection
             con.Open();
 
+            errorMessage.Visible = false;
+
             //Display the Data Table
             //disp_data();
+        }
+
+        protected void Login(object sender, EventArgs e)
+        {
+            //SqlCommand cmd = con.CreateCommand();
+            //cmd.CommandType = CommandType.Text;
+            string query = "Select COUNT(1) FROM UserCred WHERE username=@username AND password=@password";
+            SqlCommand cmd = new SqlCommand(query, con);
+            //cmd.CommandText = "Select COUNT(1) FROM User WHERE username=@username AND password=@password";
+            //cmd.ExecuteNonQuery();
+            cmd.Parameters.AddWithValue("@username", account_number.Text.Trim());
+            cmd.Parameters.AddWithValue("@password", password.Text.Trim());
+            int count = Convert.ToInt32(cmd.ExecuteScalar());
+            Console.WriteLine(count);
+            if(count == 1)
+            {
+                Session["username"] = account_number.Text.Trim();
+                Response.Redirect("Transaction.aspx");
+            }
+            else
+            {
+                errorMessage.Visible = true;
+            }
         }
 
         //Displays the current table
@@ -43,88 +68,40 @@ namespace CommerceBank
         //    SqlCommand cmd = con.CreateCommand();
         //    cmd.CommandType = CommandType.Text;
 
-            //cmd.CommandText = "select processing_date as 'Processing Date'," +
-            //" balance as Balance," +
-            //" Action," +
-            //" Description " +
-            //"from CustomerData";
+        //cmd.CommandText = "select processing_date as 'Processing Date'," +
+        //" balance as Balance," +
+        //" Action," +
+        //" Description " +
+        //"from CustomerData";
 
 
-            //cmd.CommandText = "SELECT processing_date AS 'Processing Date'," +
-            //    "case dbo.CustomerData.action" +
-            //    " when ' CR' then CONCAT('$',Amount)" +
-            //    " when ' DR' then CONCAT('-$',Amount)" +
-            //    " end as Amount,Description,State,CONCAT('$',Balance)" +
-            //    " FROM CustomerData " +
-            //    "ORDER BY processing_date desc;";
+        //cmd.CommandText = "SELECT processing_date AS 'Processing Date'," +
+        //    "case dbo.CustomerData.action" +
+        //    " when ' CR' then CONCAT('$',Amount)" +
+        //    " when ' DR' then CONCAT('-$',Amount)" +
+        //    " end as Amount,Description,State,CONCAT('$',Balance)" +
+        //    " FROM CustomerData " +
+        //    "ORDER BY processing_date desc;";
 
-            ////Executes the SQL query
-            //cmd.ExecuteNonQuery();
+        ////Executes the SQL query
+        //cmd.ExecuteNonQuery();
 
-            ////Data Table Read from sql server
-            //DataTable dt = new DataTable();
+        ////Data Table Read from sql server
+        //DataTable dt = new DataTable();
 
-            //SqlDataAdapter da = new SqlDataAdapter(cmd);
+        //SqlDataAdapter da = new SqlDataAdapter(cmd);
 
-            ////Fills the SQL Data by the Data Table
-            //da.Fill(dt);
+        ////Fills the SQL Data by the Data Table
+        //da.Fill(dt);
 
-            ////Gets the Data from the data table and places it into the HTML
-            //TransactionTable.DataSource = dt;
-            //TransactionTable.DataBind();
+        ////Gets the Data from the data table and places it into the HTML
+        //TransactionTable.DataSource = dt;
+        //TransactionTable.DataBind();
         //}
 
         //protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
         //{
 
-        //}
-
-
-        //// Exports data from table to xlsx format
-        //// Reference:
-        //// https://www.aspsnippets.com/Articles/Write-data-to-Excel-file-xls-and-xlsx-in-ASPNet.aspx
-        //protected void export_to_xls(object sender, EventArgs e)
-        //{
-        //    //Creates a command for the SQL query
-        //    SqlCommand cmd = con.CreateCommand();
-        //    cmd.CommandType = CommandType.Text;
-        //    cmd.CommandText = "select processing_date as 'Processing Date'," +
-        //        " balance as Balance," +
-        //        " Action," +
-        //        " Description " +
-        //        "from CustomerData";
-
-        //    //Executes the SQL query
-        //    cmd.ExecuteNonQuery();
-
-        //    //Data Table Read from sql server
-        //    DataTable dt = new DataTable();
-
-        //    SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-        //    da.Fill(dt);
-
-        //    // Create the workbook
-        //    XLWorkbook workbook = new XLWorkbook();
-
-        //    // Adds a tab to the Excel file
-        //    workbook.Worksheets.Add(dt, "Transactions");
-
-        //    // Prepare the response
-        //    HttpResponse httpResponse = Response;
-        //    httpResponse.Clear();
-        //    httpResponse.ContentType = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet";
-        //    httpResponse.AddHeader("content-disposition", "attachment;filename=\"TransactionData.xlsx\"");
-
-        //    // Flush the workbook to the Response.OutputStream
-        //    using (MemoryStream memoryStream = new MemoryStream())
-        //    {
-        //        workbook.SaveAs(memoryStream);
-        //        memoryStream.WriteTo(httpResponse.OutputStream);
-        //        memoryStream.Close();
-        //    }
-
-        //    httpResponse.End();
         //}
 
 

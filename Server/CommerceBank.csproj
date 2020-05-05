@@ -93,7 +93,7 @@
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
     <Content Include="Default.aspx" />
-    <Content Include="CSS\StyleSheet.css" />
+    <Content Include="StyleSheet.css" />
     <Content Include="Triggers.aspx" />
     <Content Include="Web.config" />
     <Content Include="Transaction.aspx" />
