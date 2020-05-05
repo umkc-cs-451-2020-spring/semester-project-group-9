@@ -122,6 +122,14 @@ hr{
 	
 }
 
+.float-lg-left{
+	background-color: #619240;
+	color: white;
+	border-radius: 8px;
+	border: none;
+	width: 40%;
+}
+
 /*     Table sizing     */
 .table-size{
     width:100%;
@@ -158,6 +166,8 @@ hr{
    width: 100%;
    text-align: center;
 }
+
+
 
 #login-field{
 	position:inherit;
@@ -210,4 +220,18 @@ hr{
     left: 5px;
     width:24px;
     height:24px;
+}
+
+#contact{
+	padding-left: 9%;
+	width: 50%;
+}
+
+#change-contact{
+	padding-left: 10%
+}
+
+#alert-setting{
+	padding-top: 30px;
+	padding-left: 9%;
 }

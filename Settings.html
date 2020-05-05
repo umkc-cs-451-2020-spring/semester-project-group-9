@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+
+
+<html lang="en">
+
+
+<!--     Scripts     -->
+<head>
+  <title>Homepage</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="HTML/CSS/styling.css"/>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+</head>
+
+
+    <!--     Navigation Bar     -->
+    <div class = "nav-bar row" style="padding-top: 0px;">
+
+
+        <!--     Commerce Bank Logo     -->
+        <div id="logo" class="col">
+            <href src="homepage.html" title="Commerce Bank"><img src="HTML/Images/headers/Image_1.png"></href>
+        </div>  
+        
+        
+        <!--     Navigation Bar Cells     -->
+        <ul id="navigation-bar" style="float:right" class="col row">
+
+            <!--     Transaction Cell    -->
+            <li id="transaction-cell" class="col-md-3 nav-bar-selected">
+                
+                    <a href="transaction.html">
+                    <span class="nav-bar-unselected" style="font-family:Cera-Pro;font-size: 17px">
+                        <img src="HTML/Images/icons/Transaction@2x.png" width="44px" height="27px">
+                        Transaction
+                    </span>
+                </a>
+            </li>
+
+            <!--     Dashboard Cell     -->
+            <li id="dashboard-cell" class="col-md-3">
+                <a href="dashboard.html">
+                    <span class="nav-bar-unselected" style="font-family:Cera-Pro;font-size: 19px">
+                        <img src="HTML/Images/icons/Dashbaord@2x.png" width="27px">
+                        Dashboard
+                    </span>
+                </a>
+            </li>
+
+            <!--     Setting     -->
+            <li id="setting-cell" class="col-md-3">
+                <a href="setting.html">
+                    <span class="nav-bar-selected" style="font-family:Cera-Pro-Bold;font-size: 19px">
+                        <img src="HTML/Images/icons/Settings-Green@2x.png" width="27px" height="27px">
+                        Settings
+                    </span>
+                </a>
+            </li>
+
+            <!--     User     -->
+                    <li id="user-cell" class="col-md-3" style="font-family:Cera-Pro;font-size: 19px">
+                        <div class="dropdown">
+                        <a>
+                            <span class="nav-bar-unselected" style="font-family: Cera-Pro">
+                                <img src="HTML/Images/icons/User@2x.png" width="27px" height="27px">
+                                User
+                            </span>
+                            
+                        </a>
+                        <div class="dropdown-content">
+                            Logout
+                        </div>
+                        </div>
+                    </li>
+
+            </ul>
+        </div>
+   
+
+
+
+
+    <!--     Body     -->
+    <body>
+
+    <!--     Welcome Message     -->
+    <div id="information" class="body-size">
+      <div id="welcome-message"   class="welcome-message row">
+            <div id="welcome" class="commerce-color" >
+              <p>Welcome, </p>
+                <p>Here is your transaction summary.</p>
+            </div> 
+            <br>
+            
+        </div>
+		</div>
+
+        <!--      Horizontal Line     -->
+      
+          <hr style="width: 81.2%">
+		
+		
+		<!-- contact -->
+        <div id="contact"  >
+			<p class="text" style="font-family:Cera-Pro-Bold;color: #006649">Receive notification by:</p>
+		</div>
+		
+		
+		<!-- change contact -->
+	<div id="change-contact" class="row">
+			
+			<!-- Text -->
+		  <div class=" custom-control custom-switch offset-xl-0 col-xl-1">
+  			<input type="checkbox" class="custom-control-input" id="customSwitch1">
+ 			 <label class="custom-control-label font-color" for="customSwitch1" style="font-family:Cera-Pro-Bold;font-size: 17px;">Text</label>
+			</div>
+			
+			
+			<!-- Email -->
+			<div class="col-md-4 custom-control custom-switch col-xl-1">
+ 				 <input type="checkbox" class="custom-control-input" id="customSwitch2">
+ 					 <label class="custom-control-label font-color" for="customSwitch2" style="font-family:Cera-Pro-Bold;font-size: 17px;">Email</label>
+				</div>
+			
+			
+			<!-- Change -->
+			<div class="col-md-4 change col-xl-2">
+				<a> 
+				<button type="button" class="float-lg-left">Change</button></a>
+		
+	   		 </div>
+		
+		</div>
+		
+		
+		<!-- Notification setting -->
+        <div id="alert-setting"  >
+			<p class="text" style="font-family:Cera-Pro-Bold;color: #006649">Notification settings:</p>
+		</div>
+		
+		
+</body>
+</html>
