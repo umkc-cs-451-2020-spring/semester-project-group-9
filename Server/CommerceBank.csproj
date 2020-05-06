@@ -93,12 +93,13 @@
       <DependentUpon>Database1.mdf</DependentUpon>
     </Content>
     <Content Include="Default.aspx" />
+    <Content Include="Settings.aspx" />
     <Content Include="StyleSheet.css" />
-    <Content Include="Triggers.aspx" />
+    <Content Include="Dashboard.aspx" />
     <Content Include="Web.config" />
     <Content Include="Transaction.aspx" />
-    <Content Include="Dashboard.aspx" />
     <Content Include="AddTransaction.aspx" />
+    <Content Include="WebForm4.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -109,19 +110,19 @@
     <Compile Include="Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Settings.aspx.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Settings.aspx.designer.cs">
+      <DependentUpon>Settings.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Transaction.aspx.cs">
       <DependentUpon>Transaction.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Transaction.aspx.designer.cs">
       <DependentUpon>Transaction.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Dashboard.aspx.cs">
-      <DependentUpon>Dashboard.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Dashboard.aspx.designer.cs">
-      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="AddTransaction.aspx.cs">
       <DependentUpon>AddTransaction.aspx</DependentUpon>
@@ -130,12 +131,19 @@
     <Compile Include="AddTransaction.aspx.designer.cs">
       <DependentUpon>AddTransaction.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Triggers.aspx.cs">
-      <DependentUpon>Triggers.aspx</DependentUpon>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Triggers.aspx.designer.cs">
-      <DependentUpon>Triggers.aspx</DependentUpon>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebForm4.aspx.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebForm4.aspx.designer.cs">
+      <DependentUpon>WebForm4.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
