@@ -1,15 +1,17 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="CommerceBank.WebForm2" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Dashboard.aspx.cs" Inherits="CommerceBank.Triggers" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Settings - Commerce Bank</title>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"/>
 </head>
 <body>
     <form id="form1" runat="server">
 
-            <!--     Navigation Bar     -->
+                    <!--     Navigation Bar     -->
     <div class = "nav-bar row" style="padding-top: 0px;">
 
 
@@ -25,7 +27,7 @@
             <!--     Transaction Cell    -->
             <li id="transaction-cell" class="col-md-3 nav-bar-selected navBarCell">
                 
-                    <a href="transaction.html">
+                    <a href="transaction.aspx">
                     <span class="nav-bar-selected" style="font-family:Cera-Pro-Bold;font-size: 16px">
                         <img src="Images/Icons/Group_96@2x.png" />
                         Transaction
@@ -35,7 +37,7 @@
 
             <!--     Dashboard Cell     -->
             <li id="dashboard-cell" class="col-md-3 navBarCell">
-                <a href="dashboard.html">
+                <a href="dashboard.aspx">
                     <span class="nav-bar-unselected" style="font-family:Cera-Pro;font-size: 16px">
                         <img src="Images/Icons/Dashboard@2x.png"/>
                         Dashboard
@@ -45,7 +47,7 @@
 
             <!--     Setting     -->
             <li id="setting-cell" class="col-md-3 navBarCell">
-                <a href="setting.html">
+                <a href="settings.aspx">
                     <span class="nav-bar-unselected" style="font-family:Cera-Pro;font-size: 16px">
                         <img src="Images/Icons/Settings@2x.png"/>
                         Settings
@@ -72,11 +74,58 @@
             </ul>
         </div>
 
+    <div class="body-size">
 
-
-        <div>
-
+      <div id="welcome-message"   class="welcome-message row center">
+            <div id="welcome" class="commerce-color" >
+              <p>Notifications</p>
+            </div> 
+            <br/>
+            
         </div>
+        
+        <!--      Horizontal Line     -->
+        <hr />
+    </div>
+        
+
+
+            <div class="body-size row">
+                <div class="welcome-message">
+                    All Notifications
+                </div>
+            </div>
+            <div class="body-size row">
+                <div class="row ">
+                    <asp:GridView ID="TriggerTable" AlternatingRowStyle-CssClass="Grid" runat="server" ></asp:GridView>
+                </div>
+                <hr />
+            </div>
+            
+            
+            <div class="body-size row">
+                <div class="welcome-message">
+                    State Notifications
+                </div>
+            </div>
+            <div class="body-size">
+                <div class="row">
+                    <asp:GridView ID="StateTable" AlternatingRowStyle-CssClass="Grid" runat="server"></asp:GridView>
+                </div>
+                <hr />
+            </div>
+
+            <div class="body-size row">
+                <div class="welcome-message">
+                    Description Notifications
+                </div>
+            </div>
+
+            <div class="body-size">
+                <div class="row">
+                    <asp:GridView ID="DescriptionTable" AlternatingRowStyle-CssClass="Grid" runat="server"></asp:GridView>
+                </div>
+            </div>
     </form>
 </body>
 </html>

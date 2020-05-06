@@ -11,7 +11,7 @@ namespace CommerceBank
 {
 
 
-    public partial class Triggers
+    public partial class Settings
     {
 
         /// <summary>
@@ -24,22 +24,22 @@ namespace CommerceBank
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
-        /// Date control.
+        /// State control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Date;
+        protected global::System.Web.UI.WebControls.DropDownList State;
 
         /// <summary>
-        /// Category control.
+        /// AddOutState control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox Category;
+        protected global::System.Web.UI.WebControls.Button AddOutState;
 
         /// <summary>
         /// Description control.
@@ -51,48 +51,30 @@ namespace CommerceBank
         protected global::System.Web.UI.WebControls.TextBox Description;
 
         /// <summary>
-        /// Insert control.
+        /// AddTransaction control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Insert;
+        protected global::System.Web.UI.WebControls.Button AddTransaction;
 
         /// <summary>
-        /// Delete control.
+        /// TimeRange control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Delete;
+        protected global::System.Web.UI.WebControls.DropDownList TimeRange;
 
         /// <summary>
-        /// Update control.
+        /// AddTimeRange control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button Update;
-
-        /// <summary>
-        /// View control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button View;
-
-        /// <summary>
-        /// TriggerTable control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView TriggerTable;
+        protected global::System.Web.UI.WebControls.Button AddTimeRange;
     }
 }

@@ -166,9 +166,9 @@ namespace CommerceBank
             httpResponse.End();
         }
 
-        protected void Unnamed3_Click(object sender, EventArgs e)
+        protected void Redirect(object sender, EventArgs e)
         {
-
+            Response.Redirect("AddTransaction.aspx");
         }
     }
 }

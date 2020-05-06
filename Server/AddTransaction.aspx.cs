@@ -42,46 +42,19 @@ namespace CommerceBank
             System.Diagnostics.Debug.WriteLine(categ);
             string descript = Description.Text;
             System.Diagnostics.Debug.WriteLine(descript);
-
-            /*
-            string query = "INSERT INTO CustomerData ( " + Date.Text + " , " +
-                Amount + ","
-                + Action + " , " +
-                " Amount," +
-                " Description)" +
-                " VALUES('5/10/2020'," +
-                    " (SELECT" +
-                    " top 1" +
-                    " Balance" +
-                    " FROM CustomerData" +
-                    " Order By Processing_Date" +
-                    " DESC) - 50," +
-                  " 'CR'," +
-                " 50 , " +
-                "'I Did something');";
-            */
-            /*
-            string query = "INSERT INTO CustomerData (Processing_Date, Balance, Action, Amount, Description)" +
-                " VALUES ( " + Date.Text + " , " +
+            
+            string query = "INSERT INTO CustomerData (Acct, Processing_Date, Balance, Action, Amount, Description, State)" +
+                " VALUES ( " + "(SELECT top 1 Acct FROM CustomerData)"  +  " , ' " + Date.Text + " ' , " +
                 "       (SELECT top 1 Balance " +
                                     " FROM CustomerData " +
-                                    "Order By Processing_Date DESC) + " + amt + " ,  " +
-                categ + " , " +
-                amt + " , " +
-                descript + " ) ;";
+                                    "Order By Processing_Date DESC) + '" + amt + "' ,  " +
+                "'" + categ + "' , " +
+                "'" + amt + "' , " +
+                "'" + descript  + "', " +
+                "'" + state + "');";
 
             cmd.CommandText = query;
             cmd.ExecuteNonQuery();
-            */
-
-
-
-            // Reset Text Fields
-
-            //Date.Text = "";
-            //Category.Text = "";
-            //Description.Text = "";
-            //disp_data();
         }
 
         protected void Pick_Date(object sender, EventArgs e)

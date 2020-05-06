@@ -40,12 +40,8 @@ namespace CommerceBank
 
         protected void Login(object sender, EventArgs e)
         {
-            //SqlCommand cmd = con.CreateCommand();
-            //cmd.CommandType = CommandType.Text;
             string query = "Select COUNT(1) FROM UserCred WHERE username=@username AND password=@password";
             SqlCommand cmd = new SqlCommand(query, con);
-            //cmd.CommandText = "Select COUNT(1) FROM User WHERE username=@username AND password=@password";
-            //cmd.ExecuteNonQuery();
             cmd.Parameters.AddWithValue("@username", account_number.Text.Trim());
             cmd.Parameters.AddWithValue("@password", password.Text.Trim());
             int count = Convert.ToInt32(cmd.ExecuteScalar());

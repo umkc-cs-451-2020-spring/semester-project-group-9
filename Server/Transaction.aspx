@@ -31,7 +31,7 @@
             <!--     Transaction Cell    -->
             <li id="transaction-cell" class="col-md-3 nav-bar-selected navBarCell">
                 
-                    <a href="transaction.html">
+                    <a href="transaction.aspx">
                     <span class="nav-bar-selected" style="font-family:Cera-Pro-Bold;font-size: 16px">
                         <img src="Images/Icons/Group_96@2x.png" />
                         Transaction
@@ -41,7 +41,7 @@
 
             <!--     Dashboard Cell     -->
             <li id="dashboard-cell" class="col-md-3 navBarCell">
-                <a href="dashboard.html">
+                <a href="dashboard.aspx">
                     <span class="nav-bar-unselected" style="font-family:Cera-Pro;font-size: 16px">
                         <img src="Images/Icons/Dashboard@2x.png"/>
                         Dashboard
@@ -51,7 +51,7 @@
 
             <!--     Setting     -->
             <li id="setting-cell" class="col-md-3 navBarCell">
-                <a href="setting.html">
+                <a href="settings.aspx">
                     <span class="nav-bar-unselected" style="font-family:Cera-Pro;font-size: 16px">
                         <img src="Images/Icons/Settings@2x.png"/>
                         Settings
@@ -119,9 +119,7 @@
 
             <!-- Change this to a button or something later -->
             <div id="transaction-add" class="col" style="font-family:Cera-Pro-Bold; font-size=18px">
-                <a href="AddTransaction.aspx">
-                    <asp:Button runat="server" text="+ Add Transaction" Cssclass="float-lg-right transactionButton" OnClick="Unnamed3_Click"/>
-                </a>
+                    <asp:Button runat="server" text="+ Add Transaction" Cssclass="float-lg-right transactionButton" OnClick="Redirect"/>
             </div>
       	  </div>
 
