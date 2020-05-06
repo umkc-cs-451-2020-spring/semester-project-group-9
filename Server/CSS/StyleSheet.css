@@ -1,0 +1,165 @@
+﻿/*     Fonts     */
+@font-face {
+    font-family: Cera-Pro;
+    src: url("CeraPro-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: Cera-Pro-Bold;
+    font-weight: bold;
+    src: url('CeraPro-Medium.ttf') format("truetype");
+}
+
+.center {
+    position: relative;
+    align-content: center;
+    text-align: left;
+    width: 100%;
+}
+
+.body-size {
+    width: 80%;
+    left: 10%;
+    position: relative;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/*     Horizontal Line     */
+hr {
+    border: 0;
+    clear: both;
+    display: block;
+    width: 100%;
+    background-color: #ADD777;
+    height: 0px;
+    padding-top: 3px;
+}
+
+
+/*      Commerce Colors
+
+    Yellow
+    #FFCE00
+
+    Green
+    #009226
+
+    Light Green
+    #ADD777
+
+*/
+
+
+/*     Login Page     */
+
+.login-button {
+    background-color: #006649;
+    color: white;
+    width: 310px;
+    height: 50px;
+    font-family: Cera-Pro-Bold;
+}
+
+.welcome{
+    font-size:48px;
+}
+
+.footer {
+    position: absolute;
+    width: 100%;
+    background-color: #FFCE00;
+    padding: 20px;
+    color:white;
+    font-size: 20px;
+    font-family:Cera-Pro-Bold;
+}
+
+.login-box {
+    position: relative;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    width: 100%;
+    min-height: 450px;
+    border: none;
+    padding: 10px;
+}
+
+.login-field {
+    text-align: center;
+    position: relative;
+    left:30%;
+    width: 33%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-width: 5px;
+    border-color: #009226;
+    border-style:solid;
+    border-radius:5px;
+}
+
+.text-fields{
+    font-size:18px;
+}
+
+.welcome-message {
+    padding-top: 80px;
+    padding-bottom: 0px;
+    float: left;
+    border: none;
+    font-size: 28px;
+    font-family: Cera-Pro-Bold;
+    color: #006649;
+    position: relative;
+}
+
+
+
+/*     Gridview     */
+
+table {
+    font-family: Cera-Pro;
+    text-align: left;
+}
+
+.Grid {
+
+    /*      Alternating Row Color     */
+    background-color: #DCEEC5;
+    text-align:left;
+    margin: 5px 0 10px 0;
+    border: solid 1px #525252;
+    border-collapse: collapse;
+    font-family: Cera-Pro;
+
+}
+
+
+table tbody tr th {
+    padding: 4px 2px;
+    color: #ffffff;
+    background: #619240;
+    /*border-left: solid 1px #525252;*/
+    font-size: 0.9em;
+}
+
+#table-interaction {
+    padding-bottom: 20px;
+    width: 100%;
+}
+
+#transaction-add {
+    padding-right: 0;
+}
+
+
+.exportButton {
+    border: 1 solid white;
+    border-radius:5px;
+    padding: 5px 40px;
+    background: url("Images/Icons/Export@2x.png")
+    left 3px top 5px no-repeat white;
+    border: none !important;
+}
