@@ -29,14 +29,6 @@
         </div>
     </div>
 
-    <!--
-    <div id="body" class="pb-sm-3">
-        <img src="Images/Headers/small_header_graphic_2x_02@2x.png">
-    </div>
-    -->
-
-
-
 
     <!-- Login -->
     <div style="text-align:center" class="center login-box">
@@ -48,12 +40,12 @@
                 </h1>
             </div>
 
-            <div id="account_number" class="pb-sm-4 text-fields">
+            <div class="pb-sm-4 text-fields">
 
                 <asp:TextBox type="text" id="account_number" name="account_number_textfield" placeholder="Account Number" runat="server" ></asp:TextBox>
                     </div>
 
-            <div id="password" class="pb-sm-4 text-fields">
+            <div class="pb-sm-4 text-fields">
                 <asp:TextBox type="password" id="password" name="password_textfield" placeholder="Password" runat="server"></asp:TextBox>
             </div>
 
