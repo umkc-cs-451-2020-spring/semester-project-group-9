@@ -67,5 +67,10 @@ namespace CommerceBank
             Date.Text = Calendar.SelectedDate.ToShortDateString();
             Calendar.Visible = false;
         }
+
+        protected void Unnamed1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
