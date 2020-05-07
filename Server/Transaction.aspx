@@ -111,7 +111,7 @@
 
             <!--     Export File     -->
             <div class="col" style="color: #ADD777; font-family:Cera-Pro;font-size: 20px">
-                <asp:Button runat="server" ID="ExportButton" CssClass="exportButton" Text="Export" />
+                <asp:Button runat="server" OnClick="export_to_xls" ID="ExportButton" CssClass="exportButton" Text="Export" />
             </div>
                                
 

@@ -57,49 +57,6 @@ namespace CommerceBank
             }
         }
 
-        //Displays the current table
-        //public void disp_data()
-        //{
-        //    //Creates a command for the SQL query
-        //    SqlCommand cmd = con.CreateCommand();
-        //    cmd.CommandType = CommandType.Text;
-
-        //cmd.CommandText = "select processing_date as 'Processing Date'," +
-        //" balance as Balance," +
-        //" Action," +
-        //" Description " +
-        //"from CustomerData";
-
-
-        //cmd.CommandText = "SELECT processing_date AS 'Processing Date'," +
-        //    "case dbo.CustomerData.action" +
-        //    " when ' CR' then CONCAT('$',Amount)" +
-        //    " when ' DR' then CONCAT('-$',Amount)" +
-        //    " end as Amount,Description,State,CONCAT('$',Balance)" +
-        //    " FROM CustomerData " +
-        //    "ORDER BY processing_date desc;";
-
-        ////Executes the SQL query
-        //cmd.ExecuteNonQuery();
-
-        ////Data Table Read from sql server
-        //DataTable dt = new DataTable();
-
-        //SqlDataAdapter da = new SqlDataAdapter(cmd);
-
-        ////Fills the SQL Data by the Data Table
-        //da.Fill(dt);
-
-        ////Gets the Data from the data table and places it into the HTML
-        //TransactionTable.DataSource = dt;
-        //TransactionTable.DataBind();
-        //}
-
-        //protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        //{
-
-        //}
-
 
 
     }

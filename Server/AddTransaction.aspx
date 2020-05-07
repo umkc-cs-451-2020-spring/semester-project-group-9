@@ -186,7 +186,7 @@
             <div class="row">
                 <div class="col">
                     <a href="Transaction.aspx">
-                        <asp:Button runat="server" text="Cancel" Cssclass="float-lg-right cancelButton"/>
+                        <asp:Button runat="server" text="Cancel" Cssclass="float-lg-right cancelButton" OnClick="Unnamed1_Click"/>
                     </a>
                 </div>
                 <div class="col">

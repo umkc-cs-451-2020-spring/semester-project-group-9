@@ -9,10 +9,9 @@
 <head runat="server">
     <title>Login - Commerce Bank</title>
         
-    <link rel="stylesheet" type="text/css" href="CSS/StyleSheet.css"/>
+    <link rel="stylesheet" type="text/css" href="StyleSheet.css"/>
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" type="text/css" href="CSS/styling.css"/>
     <link rel="stylesheet" href="CSS/bootstrap.css"/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
@@ -20,12 +19,11 @@
 </head>
 <body>
     <form id="form1" runat="server">
-<body>
 
     <!-- Navigation bar -->
     <div id="logo" class = "nav-bar">
         <div>
-            <img src="Images/Headers/Commerce_Bank.png">
+            <img src="Images/Headers/Commerce_Bank.png"/>
         </div>
     </div>
 
@@ -54,7 +52,7 @@
             </div>
 
             <div id="login-button" class="text-fields">
-                <asp:button ID="login_button" text="Login" OnClick="Login" runat="server">
+                <asp:button ID="login_button" text="Login" OnClick="Login" runat="server" style="width: 47px">
                 </asp:button>
             </div>
 
@@ -64,8 +62,6 @@
         <footer class="footer" runat="server">
             Sign in today to check your balance
         </footer>
-
-</body>
     </form>
 </body>
 </html>
